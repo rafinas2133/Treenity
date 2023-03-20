@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class Controller : MonoBehaviour
 {
-	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
+	[SerializeField] private float m_JumpForce = 700f;							// Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
@@ -11,6 +11,9 @@ public class Controller : MonoBehaviour
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
 	[SerializeField] private Transform m_CeilingCheck;							// A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;				// A collider that will be disabled when crouching
+	[SerializeField] private BoxCollider2D m_WhatIsWall;
+	[SerializeField] private LayerMask m_WallCheck;
+	
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
@@ -18,6 +21,11 @@ public class Controller : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
+	int facing = 3;
+	int jumpCounter = 0;
+
+	
+	
 
 	[Header("Events")]
 	[Space]
@@ -39,6 +47,7 @@ public class Controller : MonoBehaviour
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
+		
 	}
 
 	private void FixedUpdate()
@@ -54,6 +63,7 @@ public class Controller : MonoBehaviour
 			if (colliders[i].gameObject != gameObject)
 			{
 				m_Grounded = true;
+				jumpCounter = 0;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
 			}
@@ -129,6 +139,12 @@ public class Controller : MonoBehaviour
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			jump = false;
+		}
+		if (WallCheck() && jump && jumpCounter <= 0 && m_Grounded == false){
+			
+			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			jumpCounter++;
 		}
 	}
 
@@ -137,10 +153,13 @@ public class Controller : MonoBehaviour
 	{
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;
-
+		facing *=-1;
 		// Multiply the player's x local scale by -1.
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+	private bool WallCheck(){
+		return Physics2D.BoxCast(m_WhatIsWall.bounds.center, new Vector3(m_WhatIsWall.size.x+0.5f,m_WhatIsWall.size.y,0), 0f, new Vector2(0, 0), 0.1f, m_WallCheck);
 	}
 }
