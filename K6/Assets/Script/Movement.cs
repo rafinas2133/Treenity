@@ -4,24 +4,27 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    //FIELDS
     private Rigidbody2D rb;
     public float speed;
     public float jumpForce;
-    public float moveInput;
-    //cek jika ditanah atau tidak
-    private bool isGrounded;
-    public Transform feetPos;
-    public float checkRadius;
+    private float moveInput;
+    public Transform wallCheck;
+    public Transform groundCheck;
     public LayerMask whatIsGround;
 
-    //hold for higher
+    //Cek jika ditanah gak
+    private bool isGrounded;
+    public float checkRadius;
+    
+
+    //Hold for higher jump
     private float jumpTimeCounter;
     public float jumpTime;
     private bool isJumping;
 
-    //cek jika nyentuk tembok gak
+    //Cek jika nyentuk tembok gak
     private bool isTouchingWall;
-    public Transform wallCheck;
     public int jumpCounter = 1;
 
     //Coyote time
@@ -36,33 +39,42 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
+        //untuk jalan kanan kiri
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+         
 
     }
 
     void Update(){
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+
+        //Untuk mengecek ditanah atau di tembok dan mengembalikan nilai true atau false
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, 0.5f, whatIsGround);
 
+        //Untuk ngisi waktu coyote timenya
         if(isGrounded){
             coyoteTimeCounter = coyoteTime;
         }else{
             coyoteTimeCounter -= Time.deltaTime;
         }
 
+        //Playernya menghadap sesuai arahnya
         if(moveInput > 0){
             transform.eulerAngles = new Vector3(0, 0, 0);
         }else if (moveInput < 0){
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
+        //Mekanisme jumpnya menggunakan coyote time 
         if (coyoteTimeCounter > 0f && Input.GetButtonDown("Jump")){
             isJumping = true;
             jumpTimeCounter = jumpTime;
             coyoteTimeCounter = 0f;
             rb.velocity = Vector2.up * jumpForce;
         }
+
+        //Sistem untuk hold for higher jump
         if (Input.GetButton("Jump") && isJumping == true){
             if (jumpTimeCounter > 0){
                 rb.velocity = Vector2.up * jumpForce;
@@ -75,11 +87,13 @@ public class Movement : MonoBehaviour
         if(Input.GetButtonUp("Jump")){
             isJumping = false;
         }
+        //Untuk merestart value ke awal ketika menyentuh tanah
         if(isGrounded){
             jumpCounter = 1;
             rb.gravityScale = 5;
         }
 
+        //Sistem Wall Jump
         if(isTouchingWall == true && isGrounded == false && moveInput != 0 && jumpCounter > 0){
             if(Input.GetButtonDown("Jump")){
             rb.velocity = Vector2.up * jumpForce;
@@ -88,6 +102,7 @@ public class Movement : MonoBehaviour
             jumpCounter--;
             }
         }
+
     }
 
     
