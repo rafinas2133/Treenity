@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public float speed;
     public float jumpForce;
     private float moveInput;
+    private bool isFacingRight = true;
     public Transform wallCheck;
     public Transform groundCheck;
     public LayerMask whatIsGround;
@@ -42,6 +43,8 @@ public class Movement : MonoBehaviour
         //untuk jalan kanan kiri
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+
          
 
     }
@@ -60,11 +63,14 @@ public class Movement : MonoBehaviour
         }
 
         //Playernya menghadap sesuai arahnya
-        if(moveInput > 0){
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }else if (moveInput < 0){
-            transform.eulerAngles = new Vector3(0, 180, 0);
+        if(moveInput > 0 && !isFacingRight){
+            //transform.eulerAngles = new Vector3(0, 0, 0);
+            Flip();
+        }else if (moveInput < 0 && isFacingRight){
+            //transform.eulerAngles = new Vector3(0, 180, 0);
+            Flip();
         }
+
 
         //Mekanisme jumpnya menggunakan coyote time 
         if (coyoteTimeCounter > 0f && Input.GetButtonDown("Jump")){
@@ -103,6 +109,10 @@ public class Movement : MonoBehaviour
             }
         }
 
+    }
+    void Flip(){
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0f, 180f, 0f);
     }
 
     
