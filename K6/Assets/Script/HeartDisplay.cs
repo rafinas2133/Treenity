@@ -14,10 +14,15 @@ public class HeartDisplay : MonoBehaviour
     public Image[] hearts;
     public HealthSystem playerHealth;
 
-    void Start()
-    {
-        this.playerHealth.SetMaxHealth(3);
+    void Awake()
+    {   if(playerHealth.checkIsLoad == true){
+            playerHealth.checkIsLoad = false;
+        }else{
+        this.playerHealth.SetMaxHealth(maxHealth);
         this.maxHealth = playerHealth.maxHealth;
+        playerHealth.checkIsLoad = false;
+        }
+        
     }
 
     void Update()

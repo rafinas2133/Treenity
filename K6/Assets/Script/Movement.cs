@@ -32,6 +32,7 @@ public class Movement : MonoBehaviour
     private float coyoteTime = 0.1f;
     private float coyoteTimeCounter;
 
+    
     void Start()
     {
       rb = GetComponent<Rigidbody2D>();
@@ -43,9 +44,6 @@ public class Movement : MonoBehaviour
         //untuk jalan kanan kiri
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-
-
-         
 
     }
 
@@ -114,7 +112,5 @@ public class Movement : MonoBehaviour
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180f, 0f);
     }
-
-    
 
 }

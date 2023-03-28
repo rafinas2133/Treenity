@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
-
+    
     public int maxHealth;
     public int health;
+    public bool checkIsLoad = false;
 
     /*
         public SpriteRenderer playerSprite;
@@ -17,6 +18,15 @@ public class HealthSystem : MonoBehaviour
     */
 
     public Movement playerMovement;
+
+    void Awake(){
+        //Seleksi jika user nge load savenyya
+        if(GameManager.isLoad){
+            LoadPlayer();
+            GameManager.isLoad = false;
+            checkIsLoad = true;
+        }
+    }
 
     //Set nilai max health
     public void SetMaxHealth(int maxHealth) {
@@ -41,5 +51,23 @@ public class HealthSystem : MonoBehaviour
             Scene currentScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(currentScene.name);
         }
+    }
+
+    //Method untuk save data dari player
+    public void SavePlayer(){
+        SaveSystem.SavePlayer(this);
+    }
+
+    //Method untuk ngeload save dari player
+    public void LoadPlayer(){
+        PlayerData data = SaveSystem.LoadPlayer();
+        health = data.health;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
+        
     }
 }
