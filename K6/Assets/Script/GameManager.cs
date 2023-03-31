@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     }
 
     //Method untuk melakukan resume game
-    public void Resume(){
+    void Resume(){
         menuUi.SetActive(false);
         Time.timeScale = 1f;
         gameMenuIsActive = false;
