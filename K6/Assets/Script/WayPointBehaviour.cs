@@ -12,7 +12,8 @@ public class WayPointBehaviour : MonoBehaviour
 
     private void Update() {
         //Menghitung jarak platform dengan waypoint sesuai index
-        if (Vector2.Distance(this.waypoints[this.currentWaypointIndex].transform.position, transform.position) < .1f) {
+        if (Vector2.Distance(this.waypoints[this.currentWaypointIndex].transform.position, transform.position) == 0f) {
+            transform.Rotate(0, 180, 0);
             //Reset index waypoint
             if (++this.currentWaypointIndex == this.waypoints.Length) {
                 this.currentWaypointIndex = 0;
