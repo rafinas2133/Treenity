@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject menuUi;
     public GameObject saveUI;
+    public GameObject HowToPlayUI;
     public static bool gameMenuIsActive = false;
     public static bool isLoad = false;
     void Update()
@@ -52,5 +53,18 @@ public class GameManager : MonoBehaviour
         PlayerData data = SaveSystem.LoadPlayer();
         isLoad = true;
         SceneManager.LoadScene(1);
+    }
+    
+    public void HowToPlay(){
+        HowToPlayUI.SetActive(true);
+        Time.timeScale = 1f;
+        gameMenuIsActive = false;
+    }
+
+    public void back_btn(){
+        HowToPlayUI.SetActive(false);
+    }
+    public void Quit(){
+        Application.Quit();
     }
 }

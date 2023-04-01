@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8d88c3ee659205c42b5bae6c618f24d3
+guid: f7c09d9f151d1a7458e351bbc67e48a0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ground putih full_0
+      name: Ground Stage 3 (96x160)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a02ba685735642d48854d3bb7eb2ee9a
-      internalID: 1509928578
+      spriteID: 7f7f8f97832b82244a8f33db7804d72e
+      internalID: 1002678288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_1
+      name: Ground Stage 3 (96x160)_1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de1dc895552f3854ab77c2e5a3220927
-      internalID: 850880164
+      spriteID: 75ea7a0d6a67285429c94d1cc159616e
+      internalID: -785657053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_2
+      name: Ground Stage 3 (96x160)_2
       rect:
         serializedVersion: 2
         x: 64
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b15f4b7e71c4ba4ab540149273963f3
-      internalID: -865614656
+      spriteID: b581b5d098bbb6942903ca1c00834afb
+      internalID: 1433813148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_3
+      name: Ground Stage 3 (96x160)_3
       rect:
         serializedVersion: 2
         x: 0
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cec80e13e2cfbfc46a21a55205a9a2b5
-      internalID: 405404876
+      spriteID: 862e59297d30ca94a95fac08ba85b8ba
+      internalID: -1165953954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_4
+      name: Ground Stage 3 (96x160)_4
       rect:
         serializedVersion: 2
         x: 32
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ef647ceb027d584fbb741cbe6d631f5
-      internalID: 226158189
+      spriteID: cf708c9ebb09ff14bb272056d5348bae
+      internalID: -1482791379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_5
+      name: Ground Stage 3 (96x160)_5
       rect:
         serializedVersion: 2
         x: 64
@@ -236,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 182e959f620ded14bb4e4ddfa028373d
-      internalID: -560184050
+      spriteID: abe97fc767303ac4d9a8e7148b201247
+      internalID: 1941474733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_6
+      name: Ground Stage 3 (96x160)_6
       rect:
         serializedVersion: 2
         x: 0
@@ -257,14 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bcd23f78fdbfcb47a2b680eb983050c
-      internalID: 1872625294
+      spriteID: 1472d4d29310d1343bc8e552c3bc6d1a
+      internalID: 1926029911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_7
+      name: Ground Stage 3 (96x160)_7
       rect:
         serializedVersion: 2
         x: 32
@@ -278,14 +278,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5602860b50b65142a206b7907cffae7
-      internalID: -645420049
+      spriteID: 997c0ca75941c454caa9273528e619df
+      internalID: 774434702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_8
+      name: Ground Stage 3 (96x160)_8
       rect:
         serializedVersion: 2
         x: 64
@@ -299,14 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11cef01a881eb3549a91735649204120
-      internalID: -1589879284
+      spriteID: f57f5dedd61912c4e80ca1140a0f8814
+      internalID: 580418344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_9
+      name: Ground Stage 3 (96x160)_9
       rect:
         serializedVersion: 2
         x: 0
@@ -320,14 +320,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7b11b05bd72ddd49b3a9efb452e847e
-      internalID: 226549416
+      spriteID: 486806b3ca2ecc045ab23425faa6c922
+      internalID: 1958247382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_10
+      name: Ground Stage 3 (96x160)_10
       rect:
         serializedVersion: 2
         x: 32
@@ -341,35 +341,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fcfdc829b8fdee4caf2b60277f67e02
-      internalID: -852836285
+      spriteID: 322beab31a3ffa94285bdf4ee557ca6a
+      internalID: -1174974622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_11
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2238c4be989cc6a45a534d7265dd9b5d
-      internalID: 1472392540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground putih full_12
+      name: Ground Stage 3 (96x160)_11
       rect:
         serializedVersion: 2
         x: 0
@@ -383,14 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f17066b7f66d7574f81eb001fc4c1ff8
-      internalID: 1634411176
+      spriteID: 0e76f6683ce33cc4da7d92ce1c045f90
+      internalID: -1196713053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground putih full_13
+      name: Ground Stage 3 (96x160)_12
       rect:
         serializedVersion: 2
         x: 32
@@ -404,29 +383,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbeeaf4e53cade94a89c564e9b90119b
-      internalID: -106593913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground putih full_14
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee49c82cd6a0ae841afe61d402b5104b
-      internalID: -877449306
+      spriteID: ddf3fe2c071639545b20bc6fec8863db
+      internalID: 586109390
       vertices: []
       indices: 
       edges: []
@@ -442,21 +400,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ground putih full_0: 1509928578
-      Ground putih full_1: 850880164
-      Ground putih full_6: 1872625294
-      Ground putih full_10: -852836285
-      Ground putih full_3: 405404876
-      Ground putih full_9: 226549416
-      Ground putih full_4: 226158189
-      Ground putih full_2: -865614656
-      Ground putih full_5: -560184050
-      Ground putih full_8: -1589879284
-      Ground putih full_12: 1634411176
-      Ground putih full_11: 1472392540
-      Ground putih full_14: -877449306
-      Ground putih full_7: -645420049
-      Ground putih full_13: -106593913
+      Ground Stage 3 (96x160)_2: 1433813148
+      Ground Stage 3 (96x160)_5: 1941474733
+      Ground Stage 3 (96x160)_10: -1174974622
+      Ground Stage 3 (96x160)_6: 1926029911
+      Ground Stage 3 (96x160)_8: 580418344
+      Ground Stage 3 (96x160)_1: -785657053
+      Ground Stage 3 (96x160)_9: 1958247382
+      Ground Stage 3 (96x160)_11: -1196713053
+      Ground Stage 3 (96x160)_3: -1165953954
+      Ground Stage 3 (96x160)_4: -1482791379
+      Ground Stage 3 (96x160)_7: 774434702
+      Ground Stage 3 (96x160)_12: 586109390
+      Ground Stage 3 (96x160)_0: 1002678288
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
