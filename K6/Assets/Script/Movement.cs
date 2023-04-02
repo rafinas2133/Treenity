@@ -44,14 +44,7 @@ public class Movement : MonoBehaviour
         //untuk jalan kanan kiri
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        if(Input.GetKeyUp(KeyCode.D)){
-
-            for (int i = 1; i < 100; i++)
-            {
-                rb.velocity = new Vector2(transform.localScale.x * i , rb.velocity.y);
-            }
-            
-        }
+        
         
 
     }
