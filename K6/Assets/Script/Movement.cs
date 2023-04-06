@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     //FIELDS
+    public Animator animator;
     private Rigidbody2D rb;
     public float speed;
     public float jumpForce;
@@ -43,6 +44,7 @@ public class Movement : MonoBehaviour
     {
         //untuk jalan kanan kiri
         moveInput = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         
         

@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject menuUi;
     public GameObject saveUI;
     public GameObject HowToPlayUI;
+    public AudioMixer audioMixer;
+    public Slider volSlider = null;
     public static bool gameMenuIsActive = false;
     public static bool isLoad = false;
     void Update()
@@ -20,6 +24,7 @@ public class GameManager : MonoBehaviour
             }
 
         }
+        
     }
 
     //Method untuk melakukan resume game
@@ -66,5 +71,9 @@ public class GameManager : MonoBehaviour
     }
     public void Quit(){
         Application.Quit();
+    }
+
+    public void setVolume(float volume){
+        audioMixer.SetFloat("volume", volume);
     }
 }
