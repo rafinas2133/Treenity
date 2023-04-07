@@ -84,6 +84,7 @@ public class Movement : MonoBehaviour
 
         //Sistem untuk hold for higher jump
         if (Input.GetButton("Jump") && isJumping == true){
+            animator.SetBool("isJumping", true);
             if (jumpTimeCounter > 0){
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
@@ -99,6 +100,7 @@ public class Movement : MonoBehaviour
         if(isGrounded){
             jumpCounter = 1;
             rb.gravityScale = 5;
+            animator.SetBool("isJumping", false);
         }
 
         //Sistem Wall Jump
