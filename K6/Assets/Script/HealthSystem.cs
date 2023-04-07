@@ -10,6 +10,8 @@ public class HealthSystem : MonoBehaviour
     public int maxHealth;
     public int health;
     public bool checkIsLoad = false;
+    public static bool terLoad = false;
+    
 
     /*
         public SpriteRenderer playerSprite;
@@ -25,6 +27,8 @@ public class HealthSystem : MonoBehaviour
             LoadPlayer();
             GameManager.isLoad = false;
             checkIsLoad = true;
+            terLoad = true;
+            
         }
     }
 
@@ -68,6 +72,7 @@ public class HealthSystem : MonoBehaviour
         position.y = data.position[1];
         position.z = data.position[2];
         transform.position = position;
+        CollectItem.itemInv = data.itemInv;
         
     }
 }
