@@ -21,7 +21,7 @@ public class HazardAttack : MonoBehaviour
     }
 
     IEnumerator DamageOverTimeCoroutine() {
-        while (this.present) {
+        while (this.present == true) {
             yield return new WaitForSeconds(this.delay);
             this.playerHp.ReduceHealth(damage);
         }
