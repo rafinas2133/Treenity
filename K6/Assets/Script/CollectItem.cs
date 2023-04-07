@@ -7,15 +7,20 @@ public class CollectItem : MonoBehaviour
     public GameObject[] block;
     public GameObject[] item;
     public static int itemInv =  0;
+    public bool isDestroyed = false;
     
 
     private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.gameObject.CompareTag("item")){
+
+        // if(collision.gameObject.CompareTag("item")){
             Destroy(collision.gameObject);
             block[itemInv].SetActive(false);
+            isDestroyed = true;
             itemInv++;
-
-        }
+            Debug.Log(itemInv);
+            
+        // }
+         
         
     }
 
