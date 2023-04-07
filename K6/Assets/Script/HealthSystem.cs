@@ -11,6 +11,7 @@ public class HealthSystem : MonoBehaviour
     public int health;
     public bool checkIsLoad = false;
     public static bool terLoad = false;
+    public GameObject LoseScene;
     
 
     /*
@@ -52,8 +53,10 @@ public class HealthSystem : MonoBehaviour
             */
         
             //Kode ulangi level --> Hanya untuk memudahkan testing
-            Scene currentScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(currentScene.name);
+            // Scene currentScene = SceneManager.GetActiveScene();
+            // SceneManager.LoadScene(currentScene.name);
+            LoseScene.SetActive(true);
+            
         }
     }
 
