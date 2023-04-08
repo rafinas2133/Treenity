@@ -13,6 +13,8 @@ public class HealthSystem : MonoBehaviour
     public static bool terLoad = false;
     public GameObject LoseScene;
     
+    
+    
 
     /*
         public SpriteRenderer playerSprite;
@@ -78,4 +80,7 @@ public class HealthSystem : MonoBehaviour
         CollectItem.itemInv = data.itemInv;
         
     }
+    
+    
+    
 }

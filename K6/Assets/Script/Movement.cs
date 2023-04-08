@@ -81,6 +81,8 @@ public class Movement : MonoBehaviour
             jumpTimeCounter = jumpTime;
             coyoteTimeCounter = 0f;
             rb.velocity = Vector2.up * jumpForce;
+            
+            
         }
 
         //Sistem untuk hold for higher jump
@@ -114,6 +116,9 @@ public class Movement : MonoBehaviour
             jumpCounter--;
             }
         }
+        
+        
+
 
     }
     void Flip(){

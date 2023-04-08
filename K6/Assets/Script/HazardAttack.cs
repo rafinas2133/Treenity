@@ -5,12 +5,17 @@ using UnityEngine;
 public class HazardAttack : MonoBehaviour
 {
     public HealthSystem playerHp;
+    private Collider2D playerCollide;
     public int damage = 1;
-    public float delay = 1f;
+    public float delay = 0.5f;
     private bool present;
 
+    void Start(){
+        playerCollide = GameObject.Find("Player").GetComponent<BoxCollider2D>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Player")) {
+        if (collision == playerCollide) {
             present = true;
             StartCoroutine(DamageOverTimeCoroutine());
         }
@@ -22,8 +27,8 @@ public class HazardAttack : MonoBehaviour
 
     IEnumerator DamageOverTimeCoroutine() {
         while (this.present == true) {
-            yield return new WaitForSeconds(this.delay);
             this.playerHp.ReduceHealth(damage);
+            yield return new WaitForSeconds(this.delay);
         }
     }
 
