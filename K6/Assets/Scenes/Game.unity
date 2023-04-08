@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 14252649}
   - component: {fileID: 14252651}
   - component: {fileID: 14252650}
+  - component: {fileID: 14252652}
   m_Layer: 0
   m_Name: Wasp
   m_TagString: Untagged
@@ -150,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 14252648}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 12.31, y: 4.83, z: 12.623289}
-  m_LocalScale: {x: 4.673055, y: 4.6730547, z: 4.6730547}
+  m_LocalScale: {x: 1.1916292, y: 1.0687422, z: 4.6730547}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1589291202}
@@ -212,9 +213,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ca5ce7f3f3ac3bb499d37119b1867d7e, type: 3}
+  m_Sprite: {fileID: 1841914390, guid: a38ce2ca254b7ff4b89efd05f6f45113, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -223,6 +224,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &14252652
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14252648}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3c448821ad2a6848b887c8991c2efbd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &35550314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,6 +1291,7 @@ GameObject:
   - component: {fileID: 282725784}
   - component: {fileID: 282725783}
   - component: {fileID: 282725782}
+  - component: {fileID: 282725787}
   m_Layer: 0
   m_Name: Beetle
   m_TagString: Enemy
@@ -1285,7 +1307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282725780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21, y: -0, z: 0}
+  m_LocalPosition: {x: -0.21, y: -0.323, z: 0}
   m_LocalScale: {x: 0.48727876, y: 0.48727876, z: 0.48727876}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1361,7 +1383,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6875, y: 2.28125}
+    oldSize: {x: 2.1875, y: 1.03125}
     newSize: {x: 1.6875, y: 2.28125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1369,20 +1391,18 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.46875, y: -0.109375}
-      - {x: 0.25, y: 1.078125}
-      - {x: 0.0625, y: 1.140625}
-      - {x: -0.5625, y: 1.140625}
-      - {x: -0.75, y: 0.734375}
-      - {x: -0.84375, y: 0.390625}
-      - {x: -0.84375, y: -0.671875}
-      - {x: -0.71875, y: -1.140625}
-      - {x: 0.625, y: -1.140625}
-      - {x: 0.84375, y: -1.015625}
-      - {x: 0.84375, y: -0.078125}
-    - - {x: 0.3125, y: -0.484375}
-      - {x: 0.375, y: -0.484375}
-      - {x: 0.3125, y: -0.546875}
+    - - {x: 1.09375, y: -0.453125}
+      - {x: 1.09375, y: 0.078125}
+      - {x: 0.96875, y: 0.296875}
+      - {x: 0.78125, y: 0.453125}
+      - {x: 0.65625, y: 0.515625}
+      - {x: -0.1875, y: 0.515625}
+      - {x: -1, y: 0.171875}
+      - {x: -1.0625, y: 0.140625}
+      - {x: -1.09375, y: 0.015625}
+      - {x: -1.09375, y: -0.328125}
+      - {x: -0.75, y: -0.515625}
+      - {x: 1.03125, y: -0.515625}
 --- !u!212 &282725786
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1424,7 +1444,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -937153466, guid: 6fa7836606d0cc146a42694c4a6521b7, type: 3}
+  m_Sprite: {fileID: -396070019, guid: 0ab95e27f26f4a64c8e8acf3b5b336bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1435,6 +1455,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &282725787
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282725780}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc68d54980051c943910c3b720d2d5f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &289469616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,6 +1489,7 @@ GameObject:
   - component: {fileID: 289469620}
   - component: {fileID: 289469619}
   - component: {fileID: 289469618}
+  - component: {fileID: 289469623}
   m_Layer: 0
   m_Name: Beetle
   m_TagString: Enemy
@@ -1464,7 +1505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289469616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21, y: -0, z: 0}
+  m_LocalPosition: {x: -0.21, y: -0.45, z: 0}
   m_LocalScale: {x: 0.48727876, y: 0.48727876, z: 0.48727876}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1540,7 +1581,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6875, y: 2.28125}
+    oldSize: {x: 2.1875, y: 1.03125}
     newSize: {x: 1.6875, y: 2.28125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1548,20 +1589,18 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.46875, y: -0.109375}
-      - {x: 0.25, y: 1.078125}
-      - {x: 0.0625, y: 1.140625}
-      - {x: -0.5625, y: 1.140625}
-      - {x: -0.75, y: 0.734375}
-      - {x: -0.84375, y: 0.390625}
-      - {x: -0.84375, y: -0.671875}
-      - {x: -0.71875, y: -1.140625}
-      - {x: 0.625, y: -1.140625}
-      - {x: 0.84375, y: -1.015625}
-      - {x: 0.84375, y: -0.078125}
-    - - {x: 0.3125, y: -0.484375}
-      - {x: 0.375, y: -0.484375}
-      - {x: 0.3125, y: -0.546875}
+    - - {x: 1.09375, y: -0.453125}
+      - {x: 1.09375, y: 0.078125}
+      - {x: 0.96875, y: 0.296875}
+      - {x: 0.78125, y: 0.453125}
+      - {x: 0.65625, y: 0.515625}
+      - {x: -0.1875, y: 0.515625}
+      - {x: -1, y: 0.171875}
+      - {x: -1.0625, y: 0.140625}
+      - {x: -1.09375, y: 0.015625}
+      - {x: -1.09375, y: -0.328125}
+      - {x: -0.75, y: -0.515625}
+      - {x: 1.03125, y: -0.515625}
 --- !u!212 &289469622
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1603,7 +1642,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -937153466, guid: 6fa7836606d0cc146a42694c4a6521b7, type: 3}
+  m_Sprite: {fileID: -396070019, guid: 0ab95e27f26f4a64c8e8acf3b5b336bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1614,6 +1653,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &289469623
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289469616}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1a2b4d634e53bae48882de11625db7fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &299359849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,6 +1846,7 @@ GameObject:
   - component: {fileID: 315237500}
   - component: {fileID: 315237496}
   - component: {fileID: 315237499}
+  - component: {fileID: 315237501}
   m_Layer: 0
   m_Name: Beetle
   m_TagString: Enemy
@@ -1802,7 +1862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315237494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21, y: -0, z: 0}
+  m_LocalPosition: {x: -0.21, y: -0.35, z: 0}
   m_LocalScale: {x: 0.48727876, y: 0.48727876, z: 0.48727876}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1843,7 +1903,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6875, y: 2.28125}
+    oldSize: {x: 2.1875, y: 1.03125}
     newSize: {x: 1.6875, y: 2.28125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1851,20 +1911,18 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.46875, y: -0.109375}
-      - {x: 0.25, y: 1.078125}
-      - {x: 0.0625, y: 1.140625}
-      - {x: -0.5625, y: 1.140625}
-      - {x: -0.75, y: 0.734375}
-      - {x: -0.84375, y: 0.390625}
-      - {x: -0.84375, y: -0.671875}
-      - {x: -0.71875, y: -1.140625}
-      - {x: 0.625, y: -1.140625}
-      - {x: 0.84375, y: -1.015625}
-      - {x: 0.84375, y: -0.078125}
-    - - {x: 0.3125, y: -0.484375}
-      - {x: 0.375, y: -0.484375}
-      - {x: 0.3125, y: -0.546875}
+    - - {x: 1.09375, y: -0.453125}
+      - {x: 1.09375, y: 0.078125}
+      - {x: 0.96875, y: 0.296875}
+      - {x: 0.78125, y: 0.453125}
+      - {x: 0.65625, y: 0.515625}
+      - {x: -0.1875, y: 0.515625}
+      - {x: -1, y: 0.171875}
+      - {x: -1.0625, y: 0.140625}
+      - {x: -1.09375, y: 0.015625}
+      - {x: -1.09375, y: -0.328125}
+      - {x: -0.75, y: -0.515625}
+      - {x: 1.03125, y: -0.515625}
 --- !u!212 &315237498
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1906,7 +1964,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -937153466, guid: 6fa7836606d0cc146a42694c4a6521b7, type: 3}
+  m_Sprite: {fileID: -396070019, guid: 0ab95e27f26f4a64c8e8acf3b5b336bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1952,6 +2010,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHp: {fileID: 1148257537}
   damage: 1
+--- !u!95 &315237501
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315237494}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8cc6a61c5162e8e40aa41693304ef4d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &340544663
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,7 +2871,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4011,8 +4089,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841560939}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -400.83, y: -531.26, z: -5.9557633}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -393.91, y: -528, z: -5.9557633}
+  m_LocalScale: {x: 0.4375, y: 0.325, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2036866069}
@@ -20927,9 +21005,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.13023391, y: -0.5643066}
+  m_Offset: {x: -0.18787904, y: -0.5643066}
   serializedVersion: 2
-  m_Radius: 0.48236197
+  m_Radius: 0.42471698
 --- !u!224 &1148257536
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23240,6 +23318,7 @@ GameObject:
   - component: {fileID: 1542162043}
   - component: {fileID: 1542162042}
   - component: {fileID: 1542162041}
+  - component: {fileID: 1542162046}
   m_Layer: 0
   m_Name: Beetle
   m_TagString: Enemy
@@ -23331,7 +23410,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6875, y: 2.28125}
+    oldSize: {x: 2.1875, y: 1.03125}
     newSize: {x: 1.6875, y: 2.28125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -23339,20 +23418,18 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.46875, y: -0.109375}
-      - {x: 0.25, y: 1.078125}
-      - {x: 0.0625, y: 1.140625}
-      - {x: -0.5625, y: 1.140625}
-      - {x: -0.75, y: 0.734375}
-      - {x: -0.84375, y: 0.390625}
-      - {x: -0.84375, y: -0.671875}
-      - {x: -0.71875, y: -1.140625}
-      - {x: 0.625, y: -1.140625}
-      - {x: 0.84375, y: -1.015625}
-      - {x: 0.84375, y: -0.078125}
-    - - {x: 0.3125, y: -0.484375}
-      - {x: 0.375, y: -0.484375}
-      - {x: 0.3125, y: -0.546875}
+    - - {x: 1.09375, y: -0.453125}
+      - {x: 1.09375, y: 0.078125}
+      - {x: 0.96875, y: 0.296875}
+      - {x: 0.78125, y: 0.453125}
+      - {x: 0.65625, y: 0.515625}
+      - {x: -0.1875, y: 0.515625}
+      - {x: -1, y: 0.171875}
+      - {x: -1.0625, y: 0.140625}
+      - {x: -1.09375, y: 0.015625}
+      - {x: -1.09375, y: -0.328125}
+      - {x: -0.75, y: -0.515625}
+      - {x: 1.03125, y: -0.515625}
 --- !u!212 &1542162045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23394,7 +23471,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -937153466, guid: 6fa7836606d0cc146a42694c4a6521b7, type: 3}
+  m_Sprite: {fileID: -396070019, guid: 0ab95e27f26f4a64c8e8acf3b5b336bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -23405,6 +23482,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1542162046
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542162039}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1ab2d527d7290d4bbef33d47fcab973, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1554621480
 GameObject:
   m_ObjectHideFlags: 0
@@ -23658,7 +23755,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595057721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.419004, y: 24.036976, z: 0.23934035}
+  m_LocalPosition: {x: 9.82, y: 24.036976, z: 0.23934035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26025,6 +26122,7 @@ GameObject:
   - component: {fileID: 1940570961}
   - component: {fileID: 1940570963}
   - component: {fileID: 1940570962}
+  - component: {fileID: 1940570964}
   m_Layer: 0
   m_Name: Wasp
   m_TagString: Untagged
@@ -26041,7 +26139,7 @@ Transform:
   m_GameObject: {fileID: 1940570960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.31, y: 4.83, z: 12.623289}
-  m_LocalScale: {x: 4.673055, y: 4.6730547, z: 4.6730547}
+  m_LocalScale: {x: 1.2066157, y: 0.9966749, z: 4.6730547}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1895885916}
@@ -26103,9 +26201,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ca5ce7f3f3ac3bb499d37119b1867d7e, type: 3}
+  m_Sprite: {fileID: 1841914390, guid: a38ce2ca254b7ff4b89efd05f6f45113, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -26114,6 +26212,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1940570964
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940570960}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59a519b699723244083d57c21b61a6e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1956894487
 GameObject:
   m_ObjectHideFlags: 0
@@ -26806,6 +26924,7 @@ GameObject:
   - component: {fileID: 2036866069}
   - component: {fileID: 2036866071}
   - component: {fileID: 2036866070}
+  - component: {fileID: 2036866072}
   m_Layer: 0
   m_Name: Wasp
   m_TagString: Untagged
@@ -26821,8 +26940,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036866068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.31, y: 4.83, z: 12.623289}
-  m_LocalScale: {x: 4.673055, y: 4.6730547, z: 4.6730547}
+  m_LocalPosition: {x: 11.31, y: 5.41, z: 12.623289}
+  m_LocalScale: {x: 1.9775056, y: 2.3920197, z: 4.6730547}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 841560940}
@@ -26884,9 +27003,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ca5ce7f3f3ac3bb499d37119b1867d7e, type: 3}
+  m_Sprite: {fileID: -1583814872, guid: fc9ded6aff4930148af59be559854883, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -26895,6 +27014,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2036866072
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036866068}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7353c72fda08a304e86db6f345c21152, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2039760223
 GameObject:
   m_ObjectHideFlags: 0

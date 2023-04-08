@@ -8,8 +8,6 @@ public class CollectItem : MonoBehaviour
     public GameObject[] storyScene;
     public static int itemInv =  0;
     private bool finish = false;
-    
-    
 
     private void OnTriggerEnter2D(Collider2D collision){
 
