@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
 
     public GameObject player;
     public DetectEdge[] onEdges;
-    public float speed;
+    public float speed = 0.75f;
     private bool flip;
     private float distance;
 
