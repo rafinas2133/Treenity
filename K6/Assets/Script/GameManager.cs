@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Slider volSlider = null;
     public static bool gameMenuIsActive = false;
     public static bool isLoad = false;
+    public HealthSystem health;
     void Update()
     {   //Untuk menampilkan UI Pause Menu jika menekan tombol "ESC"
         if(Input.GetKeyDown(KeyCode.Escape)){
@@ -46,6 +47,11 @@ public class GameManager : MonoBehaviour
 
     //Method Method untuk Main Menu
     public void NewGame(){
+        SceneManager.LoadScene(1);
+        isLoad = false;
+    }
+    public void NewGameHard(){
+        health.maxHealth = 1;
         SceneManager.LoadScene(1);
         isLoad = false;
     }
