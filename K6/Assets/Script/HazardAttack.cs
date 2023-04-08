@@ -6,7 +6,7 @@ public class HazardAttack : MonoBehaviour
 {
     public HealthSystem playerHp;
     public int damage = 1;
-    public int delay = 1;
+    public float delay = 1f;
     private bool present;
 
     private void OnTriggerEnter2D(Collider2D collision) {

@@ -14,7 +14,7 @@ public class EnemyAttack : MonoBehaviour
      {
         //Jika platform menabrak player, hp player dikurangi sejumlah damage
          if (collision.gameObject.tag == "Player") {
-            this.time += Time.deltaTime;
+            this.time += Time.fixedDeltaTime;
             if (this.time >= 0.35) {
                this.playerHp.ReduceHealth(this.damage);
                this.time = 0f;
