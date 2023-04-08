@@ -11,6 +11,7 @@ public class EnemyAttack : MonoBehaviour
     private float time;
     private bool isHit;
 
+<<<<<<< HEAD
    void Update() {
       if (this.time == -1f) {
          this.playerHp.ReduceHealth(this.damage);
@@ -50,4 +51,17 @@ public class EnemyAttack : MonoBehaviour
          this.time = 0f;
       }
    }
+=======
+    private void OnCollisionStay2D(Collision2D collision)
+     {
+        //Jika platform menabrak player, hp player dikurangi sejumlah damage
+         if (collision.gameObject.tag == "Player") {
+            this.time += Time.fixedDeltaTime;
+            if (this.time >= 0.35) {
+               this.playerHp.ReduceHealth(this.damage);
+               this.time = 0f;
+            }
+         }
+     }
+>>>>>>> 3fdd305462003af823171ff44ecb8ff94c00e5dd
 }

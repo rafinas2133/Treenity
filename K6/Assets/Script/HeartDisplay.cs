@@ -17,10 +17,15 @@ public class HeartDisplay : MonoBehaviour
     void Awake()
     {   if(playerHealth.checkIsLoad == true){
             playerHealth.checkIsLoad = false;
+        }else if(GameManager.isHard == true){
+            this.playerHealth.SetMaxHealth(1);
+            this.maxHealth = playerHealth.maxHealth;
+            playerHealth.checkIsLoad = false;
+
         }else{
-        this.playerHealth.SetMaxHealth(maxHealth);
-        this.maxHealth = playerHealth.maxHealth;
-        playerHealth.checkIsLoad = false;
+            this.playerHealth.SetMaxHealth(maxHealth);
+            this.maxHealth = playerHealth.maxHealth;
+            playerHealth.checkIsLoad = false;
         }
         
     }

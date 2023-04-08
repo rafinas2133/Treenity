@@ -6,7 +6,7 @@ public class SettingMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
     public void setVolume(float volume){
-        audioMixer.SetFloat("volume", volume);
+        audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);
     }
 
 }

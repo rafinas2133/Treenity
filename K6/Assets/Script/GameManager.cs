@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Slider volSlider = null;
     public static bool gameMenuIsActive = false;
     public static bool isLoad = false;
+    public static bool isHard = false;
     void Update()
     {   //Untuk menampilkan UI Pause Menu jika menekan tombol "ESC"
         if(Input.GetKeyDown(KeyCode.Escape)){
@@ -49,7 +50,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);
         isLoad = false;
     }
+    public void NewGameHard(){
+        isHard = true;
+        SceneManager.LoadScene(1);
+        isLoad = false;
+    }
     public void MainMenu(){
+        isHard = false;
         SceneManager.LoadScene(0);
         Time.timeScale = 1f;
         gameMenuIsActive = false;

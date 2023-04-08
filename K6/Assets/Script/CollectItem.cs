@@ -1,25 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectItem : MonoBehaviour
 {
     public GameObject[] block;
     public GameObject[] item;
+    public GameObject[] storyScene;
     public static int itemInv =  0;
-    public bool isDestroyed = false;
+    private bool finish = false;
+    
     
 
     private void OnTriggerEnter2D(Collider2D collision){
 
-        // if(collision.gameObject.CompareTag("item")){
+        if(collision.gameObject.CompareTag("item")){
             Destroy(collision.gameObject);
             block[itemInv].SetActive(false);
-            isDestroyed = true;
+            GetStoryScene(itemInv);
             itemInv++;
-            Debug.Log(itemInv);
+              
+        }
+
+        if(collision.gameObject.CompareTag("final")){
+            GetStoryScene(3);
+            finish = true;
             
-        // }
+
+        }
          
         
     }
@@ -37,4 +44,25 @@ public class CollectItem : MonoBehaviour
             
         
     }
+
+    void GetStoryScene(int i){
+        storyScene[i].SetActive(true);
+        Time.timeScale = 0f;
+        
+    }
+
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Return)){
+            if(finish == false){
+            storyScene[itemInv-1].SetActive(false);
+            Time.timeScale = 1f;
+            }else if(finish == true){
+                SceneManager.LoadScene(0);
+                finish = false;
+                Time.timeScale = 1f;
+            }            
+
+        }
+    }
+
 }

@@ -6,6 +6,7 @@ public class HazardAttack : MonoBehaviour
 {
     public HealthSystem playerHp;
     public int damage = 1;
+<<<<<<< HEAD
     private bool isHit;
     private float time;
 
@@ -21,6 +22,10 @@ public class HazardAttack : MonoBehaviour
          this.time = 0f;
       }
    }
+=======
+    public float delay = 1f;
+    private bool present;
+>>>>>>> 3fdd305462003af823171ff44ecb8ff94c00e5dd
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
