@@ -19,8 +19,6 @@ public class EnemyMovement : MonoBehaviour
                 if (this.player.transform.position.x > this.transform.position.x) {
                     scale.x = Mathf.Abs(scale.x) * (this.flip ? -1 : 1);
                     this.transform.Translate(this.speed * Time.deltaTime, 0, 0);
-                } else if (Mathf.Abs(this.player.transform.position.x - this.transform.position.x) < 1f) {
-                    this.transform.Translate(0, 0, 0);
                 } else {
                     scale.x = Mathf.Abs(scale.x) * -1 * (this.flip ? -1 : 1);
                     this.transform.Translate(this.speed * Time.deltaTime * -1, 0, 0);
